@@ -1,5 +1,5 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
 app.use(express.static('assets'));
 
@@ -25,9 +25,9 @@ app.get('/store', function (req, res) {
     res.send('To jest sklep')
 });
 
-var server = app.listen(3000, 'localhost', function() {
-    var host = server.address().address;
-    var port = server.address().port;
+const server = app.listen(3000, 'localhost', function() {
+    const host = server.address().address;
+    const port = server.address().port;
 
     console.log('Przykładowa aplikacja nasłuchuje na http://' + host + ':' + port);
 });
